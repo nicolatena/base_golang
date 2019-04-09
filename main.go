@@ -5,7 +5,6 @@ import (
     "go_rest_api/service/routes"
     
     "github.com/gin-contrib/static"
-    "github.com/foolin/gin-template"
 )
 
 
