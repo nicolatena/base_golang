@@ -11,11 +11,17 @@ func Routes(route *gin.Engine){
 	db := config.DBInit()
 	inDB := &controllers.InDB{DB: db}
 
-	users := route.Group("/v1/api/users")
+	v1 := route.Group("/v1")
 	{
-		users.GET("/select", inDB.SelectDataUser)
-		// users.POST("/api/insert", inDB.InsertData)
-		// users.PUT("/api/update/:id", inDB.UpdateData)
-		// users.DELETE("/api/delete/:id", inDB.DeleteData)
+		api := v1.Group("/api")
+		{
+			users := api.Group("/users")
+			{
+				users.GET("/select", inDB.SelectDataUser)
+				users.POST("/insert", inDB.InsertDataUser)
+				users.PUT("/update/:id", inDB.UpdateDataUser)
+				users.DELETE("/delete/:id", inDB.DeleteDataUser)
+			}
+		}
 	}
 }

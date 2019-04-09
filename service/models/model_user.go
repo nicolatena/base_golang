@@ -12,7 +12,8 @@ type User struct {
   Email string `json:"email" form:"email" gorm:"unique"`
   Password string `json:"password" form:"password"`
   Role string `json:"role"`
-  Isactivated string `json:"isactivated" form:"isactivated"`
+  Isactivated int `json:"isactivated" form:"isactivated"`
+  Isused int `json:"isused" form:"isused"`
 }
 
 

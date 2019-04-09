@@ -8,6 +8,6 @@
 		"port":"5432",
 		"user":"postgres",
 		"pass":"root",
-		"name":"pede_admin"
+		"name":"base_golang"
 	}
 }
