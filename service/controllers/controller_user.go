@@ -95,7 +95,8 @@ func (idb *InDB) DeleteDataUser(c *gin.Context) {
     
     id := c.Param("id")
     idb.DB.Where("id = ?", id).First(&sc_data)
-    idb.DB.Delete(sc_data)
+    //idb.DB.Delete(sc_data) // SOFT DELETE
+    idb.DB.Unscoped().Delete(sc_data) // DELETE PERMANENT
 
     idb.DB.Find(&arr_data)
 
