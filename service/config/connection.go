@@ -5,12 +5,12 @@ import (
     "github.com/jinzhu/gorm"
     _ "github.com/jinzhu/gorm/dialects/postgres"
 	"github.com/spf13/viper"
-    . "go_rest_api/service/models"
+    . "rest-api-go/service/models"
 )
 
 func DBInit() *gorm.DB {
 
-	viper.SetConfigFile(`go_rest_api/service/config/config.json`)
+	viper.SetConfigFile(`rest-api-go/service/config/config.json`)
 	err := viper.ReadInConfig()
 
 	if err != nil{

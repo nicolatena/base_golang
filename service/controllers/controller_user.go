@@ -6,7 +6,7 @@ import (
 
     "github.com/gin-gonic/gin"
     _ "github.com/jinzhu/gorm/dialects/postgres"
-    . "go_rest_api/service/models"
+    . "rest-api-go/service/models"
 )
 
 func (idb *InDB) SelectDataUser(c *gin.Context) {

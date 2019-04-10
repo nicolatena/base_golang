@@ -2,7 +2,7 @@ package main
 
 import (
     "github.com/gin-gonic/gin"
-    "go_rest_api/service/routes"
+    "rest-api-go/service/routes"
     
     "github.com/gin-contrib/static"
 )
@@ -12,7 +12,7 @@ func main() {
 	route := gin.Default()
 	
 	// inisialisasi folder upload
-	route.Use(static.Serve("/service", static.LocalFile("go_rest_api/service", true)))
+	route.Use(static.Serve("/service", static.LocalFile("rest-api-go/service", true)))
 
 	routes.Routes(route)
 

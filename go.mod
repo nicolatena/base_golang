@@ -1,4 +1,4 @@
-module home/ocin/go/go_rest_api
+module home/ocin/go/rest-api-go
 
 go 1.12
 

@@ -2,8 +2,8 @@ package routes
 
 import (
     "github.com/gin-gonic/gin"
-    "go_rest_api/service/config"
-    "go_rest_api/service/controllers"
+    "rest-api-go/service/config"
+    "rest-api-go/service/controllers"
 )
 
 func Routes(route *gin.Engine){
